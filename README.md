@@ -1,2 +1,2 @@
 # Sommerhuse-Steder
-Systemudvikling - Danni, Lasse, Xu og Menja
+Systemudvikling - Danni, Emil, Lasse, Xu og Menja

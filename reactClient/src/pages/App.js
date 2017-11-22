@@ -10,6 +10,7 @@ import UserList from "./UserList";
 import TopMenu from "./TopMenu";
 import Register from "./Register";
 import Locations from "./Locations";
+import AddPlace from "./AddPlace";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/locations" component={Locations} />
         <Route path="/random" component={RandomNumber} />
         <Route path="/admin" component={AdminPage} />
+        <Route path="/addplace" component={AddPlace} />
         <Route path="/register" component={Register} />
       </Switch>
     </div>

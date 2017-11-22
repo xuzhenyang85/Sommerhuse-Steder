@@ -74,6 +74,34 @@ class UserStore {
   }
 
 
+addPlace = (placeData,cb) => {
+  this._errorMessage = "";
+
+  var place = placeData;
+
+  var options ={
+    method: "POST",
+    body: JSON.stringify(place),
+    headers: new Headers({
+      'Content-Type': 'application/json'
+    })
+  }
+  let resFromFirstPromise = null;
+  fetch(URL + "api/demoall/createPlace", options)
+  .then( res => {
+    resFromFirstPromise = res;
+    //return res.json();
+  })
+  .then(data => {
+    //data.message do something
+  })
+  .catch(err => {
+    if(cb) {
+      cb({ errorMessage: fetchHelper.addJustErrorMessage(err) });
+    }
+  })
+  return;
+  }
 }
 
 let userStore = new UserStore();
